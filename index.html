@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BLOG</title>
+    <script src="https://kit.fontawesome.com/42762d49f1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!--TOP NAV-->
+
+<header class="stick">
+    <nav>
+
+        <div class="d-flex jc-between">
+
+            <!--TITLE-->
+            <div class="title">
+                BLOG
+            </div>
+
+            <div class="d-flex ai-center">
+
+                <!--NAV MENU OPTIONS-->
+                <a href="#"><span class="navMenu">HOME</span></a>
+                <a href="#"><span class="navMenu">OPTIONS</span></a>
+                <a href="#"><span class="navMenu">PAGES</span></a>
+                <a href="#"><span class="navMenu">SHOP</span></a>
+                <a href="#"><span class="navMenu">PORTFOLIO</span></a>
+                <a href="#"><span class="navMenu">ELEMENTS</span></a>
+
+                <!--NAV ICONS-->
+                <div class="m-5">
+                    <i class="fab fa-facebook-f m-5"></i>
+                    <i class="fab fa-instagram m-5"></i>
+                    <i class="fab fa-pinterest m-5"></i>
+                    <i class="fas fa-plus-square m-5"></i>
+                    <i class="fab fa-vimeo m-5"></i>
+                    <i class="fas fa-wifi m-5"></i>
+                </div>
+
+                <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
+                <div>
+                    <p class="m-0" id="slider"><i class="fas fa-bars m-5"></i></p>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </nav>
+</header>
+
+<!--SIDE NAV-->
+
+<div id="mySidenav" class="sideNav d-flex f-direction">
+
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" id="home">HOME</a>
+    <a href="#" class="shop">SHOP</a>
+    <a href="#">ABOUT</a>
+    <a href="#">CONTACT</a>
+    <a href="#"><p class="fs-12 m-0">RETURN POLICY</p></a>
+    <a href="#"><p class="fs-12 m-0">DISCLAIMER</p></a>
+
+    <div class="d-flex">
+        <a href="#"><i class="fab fa-facebook-f fs-18"></i></a>
+        <a href="#"><i class="fab fa-pinterest fs-18"></i></a>
+        <a href="#"><i class="fab fa-google-plus fs-18"></i></a>
+    </div>
+
+
+</div>
+
+<section id="mainWindow">
+    <div class="main-img"></div>
+    <div class="p-30 d-flex f-wrap" id="cardsDiv">
+        <div class="blogCard">
+            <img src="https://images.unsplash.com/photo-1606729029953-c3e84eab3376?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1091&q=80" width="325" height="245">
+            <div class="fs-12"><span class="cardTime">DECEMBER 14, 2016</span> / <span class="cardPath">ARTWORKS, TIPS</span></div>
+            <h3 class="fs-18">Home Office Decoration Tips</h3>
+            <p class="fs-14">Lorem ipsum dolor sit amet, consectetuer elit, sed diam nonummy nibh tincidunt ut laoreet dolore magna aliquam erat ...</p>
+            <div class="d-flex jc-between ai-center">
+                <span class="fs-12 readMore">READ MORE</span>
+                <span class="fs-14"><i class="fab fa-facebook-f m-5"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest m-5"></i></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>
