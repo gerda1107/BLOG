@@ -84,16 +84,20 @@ header {
     font-size: 14px;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: black;
 }
 
-a:hover {
+nav a:hover {
     color: #003cd4;
     border-bottom: 2px solid #003cd4;
 }
-
+.title a:hover {
+    cursor: pointer;
+    border-bottom: none;
+    color: black;
+}
 i:hover {
     cursor: pointer;
     color: #003cd4;
@@ -160,11 +164,18 @@ input {
 /*HEADER SECTION*/
 
 .main-img {
-    background-image: url('https://images.unsplash.com/photo-1606162446244-0e3fd9cf11c2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+    background-image: url('https://coney.qodeinteractive.com/wp-content/uploads/2016/12/masonry-r-slide-img-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    height: 400px;
+    height: 450px;
+}
+
+.main-img div {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 300;
+    margin-top: 35px;
 }
 
 /*SIDE NAV*/
@@ -183,16 +194,27 @@ input {
 }
 
 .sideNav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 23px;
     color: #e0d7d7;
     display: block;
     transition: 0.3s;
+    text-align: right;
+}
+
+.sideNav div {
+    padding: 8px 8px 8px 32px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #e0d7d7;
+    display: block;
 }
 
 .sideNav a:hover {
-    color: rgb(250, 91, 47);
+    color: #003cd4;
+    text-decoration: none;
 }
 
 .sideNav .closebtn {
@@ -205,6 +227,16 @@ input {
 
 .main-img {
     transition: margin-left .5s;
+}
+
+#createPost {
+    margin-top: 30px;
+}
+
+#login, #register, #createPost {
+    padding: 8px 8px 8px 32px;
+    font-size: 30px;
+    text-align: left;
 }
 
 @media screen and (max-height: 450px) {
@@ -237,6 +269,8 @@ input {
     font-weight: 300;
     line-height: 25px;
     letter-spacing: .2px;
+    height: 100px;
+    overflow: hidden;
 }
 
 .cardTime, .cardPath {
@@ -248,4 +282,105 @@ input {
     line-height: 21px;
     letter-spacing: .5px;
     font-weight: 700;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #111111;
+    color: white;
+}
+
+#social {
+    padding: 45px;
+    width: 80%;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: .2px;
+    border-bottom: 0.5px solid #777777;
+}
+
+#footerSecond {
+    padding: 33px;
+    color: #777777;
+}
+
+.fa-angle-up {
+    position: absolute;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #003cd4;
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 15px;
+    color: white;
+}
+
+#instagram img {
+    width: 16.7%;
+    margin: 0;
+}
+
+#instagram h6 {
+    margin: 45px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+/*USER WINDOW*/
+
+.userHeader {
+    background-color: #f6f6f6;
+    height: 300px;
+}
+
+/*REGISTER FORM*/
+
+.reg-img {
+    background-image: url('https://images.unsplash.com/photo-1606767041004-6b918abe92be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 250px;
+}
+
+.reg-img h2 {
+    font-size: 40px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.register form {
+    width: 80%;
+}
+
+.register input {
+    width: 60%;
+}
+
+/*MODAL*/
+
+#modalWin {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+#modalCont {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
 }

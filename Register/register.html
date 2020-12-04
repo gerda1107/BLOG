@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER</title>
+    <script src="https://kit.fontawesome.com/42762d49f1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="registerScript.js" defer></script>
+</head>
+<body>
+
+<!--TOP NAV-->
+
+<header class="stick">
+    <nav>
+
+        <div class="d-flex jc-between">
+
+            <!--TITLE-->
+            <div class="title">
+                <a href="../index.html">CONEY</a>
+            </div>
+
+            <div class="d-flex ai-center">
+
+                <!--NAV MENU OPTIONS-->
+                <a href="#"><span class="navMenu">HOME</span></a>
+                <a href="#"><span class="navMenu">OPTIONS</span></a>
+                <a href="#"><span class="navMenu">PAGES</span></a>
+                <a href="#"><span class="navMenu">SHOP</span></a>
+                <a href="#"><span class="navMenu">PORTFOLIO</span></a>
+                <a href="#"><span class="navMenu">ELEMENTS</span></a>
+
+                <!--NAV ICONS-->
+                <div class="m-5">
+                    <i class="fab fa-facebook-f m-5"></i>
+                    <i class="fab fa-instagram m-5"></i>
+                    <i class="fab fa-pinterest m-5"></i>
+                    <i class="fas fa-plus-square m-5"></i>
+                    <i class="fab fa-vimeo m-5"></i>
+                    <i class="fas fa-wifi m-5"></i>
+                </div>
+
+                <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
+                <div>
+                    <p class="m-0" id="slider"><i class="fas fa-bars m-5"></i></p>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </nav>
+</header>
+
+<!--SIDE NAV-->
+
+<div id="mySidenav" class="sideNav d-flex f-direction">
+
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="../CreatePost/createpost.html" id="createPost">CREATE A POST</a>
+    <div>FILTER BY DATE
+        <a href="#" onclick="filterNew()">Newest to Oldest</a>
+        <a href="#" onclick="filterOld()">Oldest to Newest</a>
+    </div>
+
+    <div id="user">FILTER BY USER
+        <a href="#" onclick="filterUser()">SEE ALL USERS</a>
+    </div>
+
+    <a href="../Login/login.html" id="login">LOGIN</a>
+    <a href="register.html" id="register">REGISTER</a>
+
+</div>
+
+<!--REGISTER FORM-->
+
+<section>
+    <div class="reg-img d-flex jc-center ai-center">
+        <h2>REGISTRATION FORM</h2>
+    </div>
+
+    <div class="d-flex jc-center ai-center f-direction register p-30">
+        <form>
+            <input type="text" id="username" name="username" placeholder="USERNAME" oninput="getUsername(event)"><br>
+            <input type="password" id="newPwd" placeholder="PASSWORD" oninput="getNewPassword(event)"><br>
+            <input type="password" id="repPwd" placeholder="REPEAT PASSWORD" oninput="getRepeatPassword(event)">
+        </form>
+        <span id="warning"></span>
+        <button id="reg-submit" onclick="createUser()">SUBMIT</button>
+    </div>
+</section>
+
+</body>
+</html>
