@@ -14,7 +14,24 @@
 <!--TOP NAV-->
 
 <header class="stick">
-    <nav>
+    <nav class="smallDisplay">
+        <div class="d-flex jc-between">
+            <div>
+                <!--suppress XmlDuplicatedId -->
+                <p class="m-0" id="slider2"><i class="fas fa-bars m-5"></i></p>
+            </div>
+            <!--TITLE-->
+            <div class="title">
+                <a href="../index.html">CONEY</a>
+            </div>
+
+            <div class="d-flex ai-center">
+                <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="originalDisplay">
 
         <div class="d-flex jc-between">
 
@@ -26,7 +43,7 @@
             <div class="d-flex ai-center">
 
                 <!--NAV MENU OPTIONS-->
-                <a href="#"><span class="navMenu">HOME</span></a>
+                <a href="../index.html"><span class="navMenu">HOME</span></a>
                 <a href="#"><span class="navMenu">OPTIONS</span></a>
                 <a href="#"><span class="navMenu">PAGES</span></a>
                 <a href="#"><span class="navMenu">SHOP</span></a>
@@ -45,6 +62,7 @@
 
                 <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
                 <div>
+                    <!--suppress XmlDuplicatedId -->
                     <p class="m-0" id="slider"><i class="fas fa-bars m-5"></i></p>
                 </div>
 
@@ -61,26 +79,18 @@
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="../CreatePost/createpost.html" id="createPost">CREATE A POST</a>
-    <div>FILTER BY DATE
-        <a href="#" onclick="filterNew()">Newest to Oldest</a>
-        <a href="#" onclick="filterOld()">Oldest to Newest</a>
-    </div>
-
-    <div id="user">FILTER BY USER
-        <a href="#" onclick="filterUser()">SEE ALL USERS</a>
-    </div>
-
     <a href="../Login/login.html" id="login">LOGIN</a>
     <a href="../Register/register.html" id="register">REGISTER</a>
 
 </div>
 
 <section>
-    <div class="d-flex jc-center ai-center">
-        <h2>EDIT</h2>
-    </div>
+    <div class="edit-img d-flex f-direction">
+        <div class="createCard d-flex ai-center f-direction">
+            <h3>EDIT YOUR POST</h3>
 
-    <div class="d-flex jc-center ai-center f-direction p-30" id="editDiv">
+            <div class="d-flex jc-center ai-center f-direction" id="editDiv"></div>
+        </div>
     </div>
 </section>
 

@@ -1,17 +1,20 @@
 const slider = document.getElementById('slider')
-// const modal = document.getElementById('modalWin')
-// const modalInfo = document.getElementById('modalText')
+const slider2 = document.getElementById('slider2')
 
 let cardData = []
-let secretUserKey
+let secretUserKey = window.localStorage.getItem('secret')
 let cardId
 
 let img
 let mainTitle
 let desc
 
+let registerAlert
+
 //SLIDER
+
 slider.addEventListener('click', openNav)
+slider2.addEventListener('click', openNav)
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "500px";
@@ -38,29 +41,38 @@ function getInfo() {
 }
 
 function displayInfo() {
+
+    let date = new Date(cardData[0].timestamp)
+
     specificPost.innerHTML = ''
     specificPost.innerHTML += `
-        <div>
-            <img src="${cardData[0].image}" width="325" height="245">
-            <div class="fs-12"><span class="cardPath">${cardData[0].username}</span></div>
+            <img src="${cardData[0].image}">
+            <div class="fs-14"><span class="cardTime">${date.toDateString()}</span> / <span class="cardPath">${cardData[0].username}</span></div>
             <h3 class="fs-18">${cardData[0].title}</h3>
             <p class="fs-14">${cardData[0].description}</p>
             <div class="d-flex jc-between ai-center">
-                <span class="fs-14"><i class="fab fa-facebook-f m-5"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest m-5"></i></span>
+                <span class="fs-14"> SHARE: <i class="fab fa-facebook-f m-10"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest m-10"></i></span>
             </div>
-            <button onclick="showAll()">DELETE</button>
-            <a href="../Editing/edit.html"><button onclick="clickEdit(event)">EDIT</button></a> 
-        </div>
+            `
+    console.log(secretUserKey)
+
+    if(!!secretUserKey) {
+        specificPost.innerHTML +=
+        `<button onclick="showAll()">DELETE</button>
+        <a href="../Editing/edit.html"><button onclick="clickEdit(event)">EDIT</button></a>
 
 
-    <div id="modalWin">
-        <div id="modalCont">
-            <span class="clsBtn" onclick="closeModal()">x</span>
-            <p id="modalText"></p>
-            <button id="modalVerify" onclick="clickDelete()">Yes</button>
-            <button onclick="closeModal()">No</button>
-        </div>
-    </div>`
+
+        <div id="modalWin">
+            <div id="modalCont" class="d-flex f-direction ai-center">
+                <p id="modalText" class="fs-18"></p>
+                <span id="warning"></span>
+                <button id="modalVerify" onclick="clickDelete()">Yes</button>
+                <button onclick="closeModal()">No</button>
+            </div>
+        </div>`
+    }
+
 }
 
 //MODAL WINDOW
@@ -72,6 +84,14 @@ function showAll() {
 
 function closeModal() {
     modalWin.style.display = "none";
+}
+
+function validation() {
+    if(secretUserKey && cardId) {
+        warning.innerHTML = registerAlert
+    } else {
+        warning.innerHTML = registerAlert
+    }
 }
 
 function clickDelete() {
@@ -94,6 +114,8 @@ function clickDelete() {
         body: JSON.stringify(deletePost)
     }).then(res => res.json()).then(data => {
         console.log(data)
+        registerAlert = data.message
+        validation()
     })
 }
 

@@ -14,7 +14,24 @@
 <!--TOP NAV-->
 
 <header class="stick">
-    <nav>
+    <nav class="smallDisplay">
+        <div class="d-flex jc-between">
+            <div>
+                <!--suppress XmlDuplicatedId -->
+                <p class="m-0" id="slider2"><i class="fas fa-bars m-5"></i></p>
+            </div>
+            <!--TITLE-->
+            <div class="title">
+                <a href="../index.html">CONEY</a>
+            </div>
+
+            <div class="d-flex ai-center">
+                <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="originalDisplay">
 
         <div class="d-flex jc-between">
 
@@ -26,7 +43,7 @@
             <div class="d-flex ai-center">
 
                 <!--NAV MENU OPTIONS-->
-                <a href="#"><span class="navMenu">HOME</span></a>
+                <a href="../index.html"><span class="navMenu">HOME</span></a>
                 <a href="#"><span class="navMenu">OPTIONS</span></a>
                 <a href="#"><span class="navMenu">PAGES</span></a>
                 <a href="#"><span class="navMenu">SHOP</span></a>
@@ -45,6 +62,7 @@
 
                 <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
                 <div>
+                    <!--suppress XmlDuplicatedId -->
                     <p class="m-0" id="slider"><i class="fas fa-bars m-5"></i></p>
                 </div>
 
@@ -61,15 +79,6 @@
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="../CreatePost/createpost.html" id="createPost">CREATE A POST</a>
-    <div>FILTER BY DATE
-        <a href="#" onclick="filterNew()">Newest to Oldest</a>
-        <a href="#" onclick="filterOld()">Oldest to Newest</a>
-    </div>
-
-    <div id="user">FILTER BY USER
-        <a href="#" onclick="filterUser()">SEE ALL USERS</a>
-    </div>
-
     <a href="../Login/login.html" id="login">LOGIN</a>
     <a href="../Register/register.html" id="register">REGISTER</a>
 
@@ -77,7 +86,25 @@
 
 <!--POST-->
 
-<section id="specificPost"></section>
+<section class="d-flex jc-center">
+    <div id="specificPost"></div>
+    <div id="spSocial">
+        <div>
+            <h3 class="fs-12">ABOUT ME</h3>
+            <p class="fs-14">Lorem ipsum dolor sit amet, consec tetuer adipiscing elit,
+                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</p>
+        </div>
+
+        <div>
+            <h3 class="fs-12">FOLLOW US</h3>
+            <p class="fs-14">Lorem ipsum dolor sit amet, con sectetuer adipiscing elit, sed diam</p>
+            <div id="facebook" class="fs-12 ta-center spSocialAll">FACEBOOK</div>
+            <div id="twitter" class="fs-12 ta-center spSocialAll">TWITTER</div>
+            <div id="insta" class="fs-12 ta-center spSocialAll">INSTAGRAM</div>
+            <div id="rss" class="fs-12 ta-center spSocialAll">RSS</div>
+        </div>
+    </div>
+</section>
 
 
 </body>

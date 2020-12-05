@@ -1,4 +1,6 @@
 const slider = document.getElementById('slider')
+const slider2 = document.getElementById('slider2')
+
 let cardData
 let postId
 
@@ -11,6 +13,7 @@ let registerAlert
 //SLIDER
 
 slider.addEventListener('click', openNav)
+slider2.addEventListener('click', openNav)
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "500px";
@@ -32,9 +35,8 @@ function addCard() {
       <button id="edit-submit" onclick="showAll()">SUBMIT</button>
 
     <div id="modalWin">
-        <div id="modalCont">
-            <span class="clsBtn" onclick="closeModal()">x</span>
-            <p id="modalText"></p>
+        <div id="modalCont" " class="d-flex f-direction ai-center">
+            <p id="modalText"  class="fs-18"></p>
             <span id="warning"></span>
             <button id="modalVerify" onclick="editPost()">Yes</button>
             <button onclick="closeModal()">Go Back</button>

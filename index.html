@@ -14,7 +14,24 @@
 <!--TOP NAV-->
 
 <header class="stick">
-    <nav>
+    <nav class="smallDisplay">
+        <div class="d-flex jc-between">
+            <div>
+                <!--suppress XmlDuplicatedId -->
+                <p class="m-0" id="slider2"><i class="fas fa-bars m-5"></i></p>
+            </div>
+            <!--TITLE-->
+            <div class="title">
+                <a href="index.html">CONEY</a>
+            </div>
+
+            <div class="d-flex ai-center">
+                <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="originalDisplay">
 
         <div class="d-flex jc-between">
 
@@ -45,6 +62,7 @@
 
                 <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
                 <div>
+                    <!--suppress XmlDuplicatedId -->
                     <p class="m-0" id="slider"><i class="fas fa-bars m-5"></i></p>
                 </div>
 
@@ -61,6 +79,7 @@
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="CreatePost/createpost.html" id="createPost">CREATE A POST</a>
+
     <div>FILTER BY DATE
         <a href="#" onclick="filterNew()">Newest to Oldest</a>
         <a href="#" onclick="filterOld()">Oldest to Newest</a>
@@ -88,6 +107,30 @@
 
 </section>
 
+<section class="d-flex jc-center m-20">
+    <div class="blogCard ta-center">
+        <h4 class="fs-12">ABOUT THE BLOG</h4>
+        <img src="https://coney.qodeinteractive.com/wp-content/uploads/2016/12/footer-img-1.jpg" width="300" height="175">
+        <p class="fs-14">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+        </p>
+    </div>
+
+    <div class="blogCard ta-center">
+        <h4 class="fs-12">JOIN US ON FACEBOOK!</h4>
+        <div>
+            <img src="img/capture.png" width="350" height="130" class="max-width">
+        </div>
+
+    </div>
+
+    <div class="blogCard ta-center">
+        <h4 class="fs-12">LATEST TWEETS</h4>
+        <div>
+            <img src="img/tweet.png" width="350" height="357" class="max-width">
+        </div>
+    </div>
+</section>
+
 <section id="instagram">
     <h6>FOLLOW US ON INSTAGRAM</h6>
     <div class="d-flex jc-between">
@@ -103,22 +146,20 @@
 
 <footer class="d-flex jc-center f-direction ai-center">
     <div class="d-flex jc-between ai-center" id="social">
-        <span><i class="fab fa-facebook-f m-10"></i> FACEBOOK</span>
-        <span><i class="fab fa-twitter m-10"></i> TWITTER</span>
-        <span><i class="fab fa-instagram m-10"></i> INSTAGRAM</span>
-        <span><i class="fab fa-pinterest m-10"></i> PINTEREST</span>
-        <span><i class="fas fa-plus-square m-10"></i> BLOGLOVIN</span>
-        <span><i class="fas fa-wifi m-10"></i> RSS</span>
+        <span class="footerIcons"><i class="fab fa-facebook-f m-10"></i> FACEBOOK</span>
+        <span class="footerIcons"><i class="fab fa-twitter m-10"></i> TWITTER</span>
+        <span class="footerIcons"><i class="fab fa-instagram m-10"></i> INSTAGRAM</span>
+        <span class="footerIcons"><i class="fab fa-pinterest m-10"></i> PINTEREST</span>
+        <span class="footerIcons"><i class="fas fa-plus-square m-10"></i> BLOGLOVIN</span>
+        <span class="footerIcons"><i class="fas fa-wifi m-10"></i> RSS</span>
     </div>
 
     <div class="fs-14" id="footerSecond">
         <span>Made With Love By Select Themes</span>
-        <span><i class="fas fa-angle-up"></i></span>
+        <a href="#mainWindow"><i class="fas fa-angle-up"></i></a>
     </div>
 
 </footer>
-
-
 
 </body>
 </html>

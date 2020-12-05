@@ -12,8 +12,26 @@
 <body>
 
 <!--TOP NAV-->
-<header class="stick">
-    <nav>
+
+<header class="stick" id="top">
+    <nav class="smallDisplay">
+        <div class="d-flex jc-between">
+            <div>
+                <!--suppress XmlDuplicatedId -->
+                <p class="m-0" id="slider2"><i class="fas fa-bars m-5"></i></p>
+            </div>
+            <!--TITLE-->
+            <div class="title">
+                <a href="../index.html">CONEY</a>
+            </div>
+
+            <div class="d-flex ai-center">
+                <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="originalDisplay">
 
         <div class="d-flex jc-between">
 
@@ -25,7 +43,7 @@
             <div class="d-flex ai-center">
 
                 <!--NAV MENU OPTIONS-->
-                <a href="#"><span class="navMenu">HOME</span></a>
+                <a href="../index.html"><span class="navMenu">HOME</span></a>
                 <a href="#"><span class="navMenu">OPTIONS</span></a>
                 <a href="#"><span class="navMenu">PAGES</span></a>
                 <a href="#"><span class="navMenu">SHOP</span></a>
@@ -44,6 +62,7 @@
 
                 <div><input type="text" placeholder="Search..."><i class="fas fa-search m-5"></i></div>
                 <div>
+                    <!--suppress XmlDuplicatedId -->
                     <p class="m-0" id="slider"><i class="fas fa-bars m-5"></i></p>
                 </div>
 
@@ -55,33 +74,41 @@
 </header>
 
 <!--SIDE NAV-->
+
 <div id="mySidenav" class="sideNav d-flex f-direction">
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="../CreatePost/createpost.html" id="createPost">CREATE A POST</a>
-    <div>FILTER BY DATE
-        <a href="#" onclick="filterNew()">Newest to Oldest</a>
-        <a href="#" onclick="filterOld()">Oldest to Newest</a>
-    </div>
-
-    <div id="user">FILTER BY USER
-        <a href="#" onclick="filterUser()">SEE ALL USERS</a>
-    </div>
-
     <a href="../Login/login.html" id="login">LOGIN</a>
     <a href="../Register/register.html" id="register">REGISTER</a>
 
 </div>
 
 <section>
+
     <div class="userHeader d-flex jc-center ai-center f-direction">
-       <div id="author"></div>
-       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-           sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-           magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+        <div class="userHeaderInner">
+            <div id="author"></div>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+        </div>
     </div>
 
-    <div id="userPosts" class="d-flex f-wrap"></div>
+    <div id="userPosts" class="d-flex f-wrap jc-center m-30 p-30"></div>
+
+</section>
+
+<section id="instagram">
+    <h6>FOLLOW US ON INSTAGRAM</h6>
+    <div class="d-flex jc-between">
+        <img src="https://scontent-den4-1.cdninstagram.com/v/t51.2885-15/43914310_2420496057968167_5580204210282037248_n.jpg?_nc_cat=109&ccb=2&_nc_sid=8ae9d6&_nc_ohc=eKiFXqqE91cAX8_KpMW&_nc_ht=scontent-den4-1.cdninstagram.com&oh=198bb377ce9ce2de9b002d8d08d36376&oe=5FCA8466">
+        <img src="https://scontent-den4-1.cdninstagram.com/v/t51.2885-15/43594883_291889698313420_7067735626098933760_n.jpg?_nc_cat=101&ccb=2&_nc_sid=8ae9d6&_nc_ohc=O-KObpLm-YcAX-jrEOO&_nc_ht=scontent-den4-1.cdninstagram.com&oh=7140bab0a3b1134d63361144f3d6451d&oe=5FC90199">
+        <img src="https://scontent-den4-1.cdninstagram.com/v/t51.2885-15/43093726_2127898860795540_8582625717303377920_n.jpg?_nc_cat=100&ccb=2&_nc_sid=8ae9d6&_nc_ohc=I11DWINBPd0AX8encg6&_nc_ht=scontent-den4-1.cdninstagram.com&oh=7b31e363cbef4184011d67940b0927be&oe=5FC9A06D">
+        <img src="https://scontent-den4-1.cdninstagram.com/v/t51.2885-15/42605816_687229521670269_1184606208493879296_n.jpg?_nc_cat=105&ccb=2&_nc_sid=8ae9d6&_nc_ohc=XDcfKpMWSkMAX-Nt5UP&_nc_ht=scontent-den4-1.cdninstagram.com&oh=8a89b3eb7d2325d8bb55b696a736a9b2&oe=5FC93346">
+        <img src="https://scontent-den4-1.cdninstagram.com/v/t51.2885-15/43440350_245529979464969_6303855377310023680_n.jpg?_nc_cat=103&ccb=2&_nc_sid=8ae9d6&_nc_ohc=c2tlGVusnWoAX82lsHF&_nc_ht=scontent-den4-1.cdninstagram.com&oh=697717e2f054911221b6d11510bb1812&oe=5FCCBBCF">
+        <img src="https://scontent-den4-1.cdninstagram.com/v/t51.2885-15/42406111_362812271126714_6947217752851480576_n.jpg?_nc_cat=102&ccb=2&_nc_sid=8ae9d6&_nc_ohc=rx3dPzE4VnYAX8wuzF7&_nc_ht=scontent-den4-1.cdninstagram.com&oh=995fa9fe273972ab5b81458b0521543c&oe=5FCC641D">
+    </div>
 
 </section>
 
@@ -97,7 +124,7 @@
 
     <div class="fs-14" id="footerSecond">
         <span>Made With Love By Select Themes</span>
-        <span><i class="fas fa-angle-up"></i></span>
+        <a href="#top"><i class="fas fa-angle-up"></i></a>
     </div>
 
 </footer>

@@ -1,5 +1,5 @@
 const slider = document.getElementById('slider')
-const pswWarning = document.getElementsByClassName('passwordWarning')
+const slider2 = document.getElementById('slider2')
 
 let newPassword
 let repeatPassword
@@ -10,6 +10,7 @@ let registerAlert
 //SLIDER
 
 slider.addEventListener('click', openNav)
+slider2.addEventListener('click', openNav)
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "500px";

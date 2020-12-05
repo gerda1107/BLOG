@@ -69,6 +69,8 @@
 // secretKey, id (id stands for post id)
 
 const slider = document.getElementById('slider')
+const slider2 = document.getElementById('slider2')
+
 let cardData = []
 let usernames = []
 let userTrigger = true
@@ -76,6 +78,7 @@ let userTrigger = true
 //SLIDER
 
 slider.addEventListener('click', openNav)
+slider2.addEventListener('click', openNav)
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "500px";
@@ -112,7 +115,7 @@ function addCard() {
             <p class="fs-14">${item.description}</p>
             <div class="d-flex jc-between ai-center">
                 <a href="SinglePost/singlepost.html" class="fs-12 readMore" onclick="showPost(event)">READ MORE</a>
-                <span class="fs-14"><i class="fab fa-facebook-f m-5"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest m-5"></i></span>
+                <span class="fs-14"><i class="fab fa-facebook-f m-10"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest m-10"></i></span>
             </div>
         </div>`
     })
@@ -154,7 +157,6 @@ function filterUser() {
     }
     userTrigger = !userTrigger
 }
-
 function clickedUser(event) {
     let name = event.target.innerHTML
     window.localStorage.setItem('userName', name)

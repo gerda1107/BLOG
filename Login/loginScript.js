@@ -1,12 +1,15 @@
-
 const slider = document.getElementById('slider')
+const slider2 = document.getElementById('slider2')
+
 let loginPsw
 let loginUser
 let secretUserKey
 let dataMessage
 
 //SLIDER
+
 slider.addEventListener('click', openNav)
+slider2.addEventListener('click', openNav)
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "500px";
