@@ -22,6 +22,7 @@ function closeNav() {
 
 function loginUsername(event) {
     loginUser = event.target.value
+    window.localStorage.setItem('loggedUser', loginUser)
 }
 
 function loginPassword(event) {

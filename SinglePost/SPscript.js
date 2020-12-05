@@ -11,6 +11,8 @@ let desc
 
 let registerAlert
 
+let loginUser = window.localStorage.getItem('loggedUser')
+
 //SLIDER
 
 slider.addEventListener('click', openNav)
@@ -36,6 +38,7 @@ function getInfo() {
         .then(data => {
             cardData.push(data.data)
             displayInfo()
+            console.log(cardData)
         })
 
 }
@@ -54,14 +57,11 @@ function displayInfo() {
                 <span class="fs-14"> SHARE: <i class="fab fa-facebook-f m-10"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest m-10"></i></span>
             </div>
             `
-    console.log(secretUserKey)
 
-    if(!!secretUserKey) {
+    if(loginUser === cardData[0].username) {
         specificPost.innerHTML +=
         `<button onclick="showAll()">DELETE</button>
         <a href="../Editing/edit.html"><button onclick="clickEdit(event)">EDIT</button></a>
-
-
 
         <div id="modalWin">
             <div id="modalCont" class="d-flex f-direction ai-center">
@@ -120,9 +120,9 @@ function clickDelete() {
 }
 
 function clickEdit(event) {
-    img = event.path[1].children[0].src
-    mainTitle = event.path[1].children[2].innerHTML
-    desc = event.path[1].children[3].innerHTML
+    img = event.path[2].children[0].src
+    mainTitle = event.path[2].children[2].innerHTML
+    desc = event.path[2].children[3].innerHTML
 
     let postText = {
         image: img,
@@ -131,5 +131,5 @@ function clickEdit(event) {
     }
 
     window.localStorage.setItem('innerInfo', JSON.stringify(postText))
-    console.log(localStorage)
+    console.log(event)
 }
